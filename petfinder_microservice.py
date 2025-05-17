@@ -27,7 +27,7 @@ def main():
 
 
         print(f"{name}, ({address["city"]}, {address["state"]}), Email: {email}, Phone: {phone}")
-        print(item)
+
 
 if __name__ == "__main__":
     main()
