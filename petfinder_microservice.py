@@ -12,12 +12,22 @@ def get_token():
     return response.json()["access_token"]
 def get_organizations(zip_code, access_token):
     url = "https://api.petfinder.com/v2/organizations"
-    response = requests.post(url, params={"location": zip_code, "distance": 50}, headers={"Authorization": f"Bearer{access_token}"})
-    print(response)
+    response = requests.get(url, params={"location": zip_code, "distance": 50, "limit": 10}, headers={"Authorization": f"Bearer {access_token}"})
+    return response.json()["organizations"]
 
 def main():
     zip_code = input("Please provide a zip code: ")
     token = get_token()
-    get_organizations(zip_code, token)
+    orgs = get_organizations(zip_code, token)
+    for item in orgs:
+        name = item["name"]
+        address = item["address"]
+        email = item["email"]
+        phone = item["phone"]
+
+
+        print(f"{name}, ({address["city"]}, {address["state"]}), Email: {email}, Phone: {phone}")
+        print(item)
+
 if __name__ == "__main__":
     main()
