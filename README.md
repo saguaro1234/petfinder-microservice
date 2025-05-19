@@ -65,5 +65,5 @@ If the microservice receives an invalid ZIP code, it will return the value:
 False
 ```
 
-![UML Sequence Diagram](diagram.png)
+![UML Sequence Diagram](Screenshot (87).png)
 
