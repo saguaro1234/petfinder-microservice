@@ -1,5 +1,26 @@
 This is a microservice for Jennifer Putsche's Pet program. 
 The program receives a zip code in JSON format and returns the data for 10 pet adoption facilities within 50 miles of that zip code.
+# 🐾 Petfinder Microservice
+
+**For:** Jennifer Putsche's Pet Program  
+**Purpose:**  
+This microservice receives a U.S. ZIP code in JSON format and returns data for up to **10 pet adoption facilities** located within a **50-mile radius** of the provided ZIP code.
+
+---
+
+## 📦 Required Python Libraries
+
+- `json`
+- `socket`
+
+---
+
+## 🌐 Microservice Connection Configuration
+
+```python
+HOST = '127.0.0.1'
+PORT = 5555
+
 
 Required Python Libraries:
 JSON, socket
