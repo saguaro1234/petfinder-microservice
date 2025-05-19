@@ -65,4 +65,24 @@ If the microservice receives an invalid ZIP code, it will return the value:
 False
 ```
 
+@startuml
+actor Client
+participant "Microservice Server" as Server
+participant "Petfinder API" as API
+
+Client -> Server : Connect (Socket)
+Client -> Server : Send ZIP Code (JSON)
+
+Server -> API : GET /organizations\n(location=ZIP, distance=50)
+API --> Server : List of Organizations (JSON)
+
+alt Valid ZIP and data returned
+    Server -> Client : Send organization data (JSON)
+else Invalid ZIP or no data
+    Server -> Client : Send False
+end
+
+Client -> Client : Display results
+
+@enduml
 
