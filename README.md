@@ -65,5 +65,5 @@ If the microservice receives an invalid ZIP code, it will return the value:
 False
 ```
 
-![UML Sequence Diagram](Screenshot (87).png)
 
+![image alt](https://github.com/saguaro1234/petfinder-microservice/blob/main/Screenshot%20(87).png?raw=true)
