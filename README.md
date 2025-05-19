@@ -2,7 +2,7 @@
 
 **Petfinder Microservice**
 This is a microservice for **Jennifer Putsche's Pet Program**.
-The program receives a ZIP code in JSON format and returns data for up to **10 pet adoption facilities** within **50 miles** of the provided ZIP code.
+The program receives a ZIP code in JSON format and returns data for up to **10 pet adoption facilities** within **50 miles** of the provided ZIP code. 
 
 ---
 
